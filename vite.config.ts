@@ -4,7 +4,7 @@ import svgr from 'vite-plugin-svgr'
 import path from 'path'
 
 // GitHub Pages repo name - change this to your actual repo name
-const REPO_NAME = 'portfolio'
+const REPO_NAME = 'Ashmit-Aryan.github.io'
 
 export default defineConfig({
 
