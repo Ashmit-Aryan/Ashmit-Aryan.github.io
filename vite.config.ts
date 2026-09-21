@@ -3,10 +3,8 @@ import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 import path from 'path'
 
-const REPO_NAME = 'ashmit-aryan.github.io'
-
 export default defineConfig({
-  base: `/${REPO_NAME}/`,
+  base: '/',
 
   plugins: [
     react(),
@@ -21,58 +19,5 @@ export default defineConfig({
     },
   },
 
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: true,
-    minify: 'terser',
-
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    } as any,
-
-    rollupOptions: {
-      output: {
-        manualChunks: (id: string) => {
-          if (id.includes('node_modules')) {
-            if (
-              id.includes('react') ||
-              id.includes('react-dom')
-            ) {
-              return 'vendor-react'
-            }
-
-            if (
-              id.includes('@react-three') ||
-              id.includes('three')
-            ) {
-              return 'vendor-r3f'
-            }
-
-            if (id.includes('framer-motion')) {
-              return 'vendor-motion'
-            }
-
-            if (
-              id.includes('react-hook-form') ||
-              id.includes('@hookform') ||
-              id.includes('zod')
-            ) {
-              return 'vendor-form'
-            }
-
-            return 'vendor'
-          }
-        },
-      },
-    },
-  },
-
-  server: {
-    port: 3000,
-    open: true,
-  },
+  // ...rest of your config
 })
