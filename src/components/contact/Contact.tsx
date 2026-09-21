@@ -51,7 +51,7 @@ const contactMethods = [
   },
 ]
 
-const API_URL = (import.meta as any).env?.VITE_API_URL || "https://portfolio-website-new-ten-xi.vercel.app"
+const API_URL = (import.meta as any).env?.VITE_API_URL 
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
