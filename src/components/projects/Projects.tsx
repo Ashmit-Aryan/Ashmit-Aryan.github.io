@@ -100,78 +100,67 @@ export function Projects() {
               >
                 {/* Media */}
                 <div className="work-card-media relative aspect-[16/10] overflow-hidden bg-bg-tertiary">
-                  <div
-                    className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-transparent to-accent-secondary/10"
-                    aria-hidden="true"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Search className="w-12 h-12 mx-auto mb-3 text-accent-primary/50 group-hover:text-accent-primary/80 transition-colors" aria-hidden="true" />
-                      <p className="font-display text-xl font-semibold text-fg-tertiary">{project.title}</p>
-                      <p className="font-mono text-xs text-fg-muted mt-1">Project Preview</p>
-                    </div>
-                  </div>
-                  
-                  {/* Overlay Links */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: hoveredCard === project.id ? 1 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="work-card-overlay absolute inset-0 bg-gradient-to-t from-bg-primary/95 via-transparent to-transparent flex items-end p-6"
-                  >
-                    <div className="work-card-links flex gap-3 w-full">
-                      {project.links.demo && (
-                        <a
-                          href={project.links.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={cn(
-                            'work-card-link flex-1 flex items-center justify-center gap-2 px-4 py-3',
-                            'bg-bg-glass border border-border-secondary rounded-lg text-fg-primary',
-                            'text-sm font-medium backdrop-blur-md transition-all duration-250',
-                            'hover:bg-accent-primary hover:border-accent-primary hover:text-bg-primary'
-                          )}
-                          aria-label={`View live demo of ${project.title}`}
-                        >
-                          <ExternalLink className="w-4 h-4" aria-hidden="true" />
-                          Live Demo
-                        </a>
-                      )}
-                      {project.links.code && (
-                        <a
-                          href={project.links.code}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={cn(
-                            'work-card-link flex-1 flex items-center justify-center gap-2 px-4 py-3',
-                            'bg-bg-glass border border-border-secondary rounded-lg text-fg-primary',
-                            'text-sm font-medium backdrop-blur-md transition-all duration-250',
-                            'hover:bg-accent-primary hover:border-accent-primary hover:text-bg-primary'
-                          )}
-                          aria-label={`View source code of ${project.title}`}
-                        >
-                          <GitBranch className="w-4 h-4" aria-hidden="true" />
-                          Source Code
-                        </a>
-                      )}
-                      {project.links.caseStudy && (
-                        <a
-                          href={project.links.caseStudy}
-                          className={cn(
-                            'work-card-link flex-1 flex items-center justify-center gap-2 px-4 py-3',
-                            'bg-bg-glass border border-border-secondary rounded-lg text-fg-primary',
-                            'text-sm font-medium backdrop-blur-md transition-all duration-250',
-                            'hover:bg-accent-secondary hover:border-accent-secondary hover:text-bg-primary'
-                          )}
-                          aria-label={`Read case study for ${project.title}`}
-                        >
-                          <FileCode className="w-4 h-4" aria-hidden="true" />
-                          Case Study
-                        </a>
-                      )}
-                    </div>
-                  </motion.div>
-                </div>
+
+  <img
+    src={project.image}
+    alt={project.imageAlt}
+    className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+    loading="lazy"
+  />
+
+  {/* Gradient overlay */}
+  <div
+    className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-transparent to-transparent"
+    aria-hidden="true"
+  />
+
+  {/* Overlay Links */}
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: hoveredCard === project.id ? 1 : 0 }}
+    transition={{ duration: 0.2 }}
+    className="work-card-overlay absolute inset-0 bg-gradient-to-t from-bg-primary/95 via-transparent to-transparent flex items-end p-6"
+  >
+    <div className="work-card-links flex gap-3 w-full">
+
+      {project.links.demo && (
+        <a
+          href={project.links.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            'work-card-link flex-1 flex items-center justify-center gap-2 px-4 py-3',
+            'bg-bg-glass border border-border-secondary rounded-lg text-fg-primary',
+            'text-sm font-medium backdrop-blur-md transition-all duration-250',
+            'hover:bg-accent-primary hover:border-accent-primary hover:text-bg-primary'
+          )}
+        >
+          <ExternalLink className="w-4 h-4" />
+          Live Demo
+        </a>
+      )}
+
+      {project.links.code && (
+        <a
+          href={project.links.code}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            'work-card-link flex-1 flex items-center justify-center gap-2 px-4 py-3',
+            'bg-bg-glass border border-border-secondary rounded-lg text-fg-primary',
+            'text-sm font-medium backdrop-blur-md transition-all duration-250',
+            'hover:bg-accent-primary hover:border-accent-primary hover:text-bg-primary'
+          )}
+        >
+          <GitBranch className="w-4 h-4" />
+          Source Code
+        </a>
+      )}
+
+    </div>
+  </motion.div>
+
+</div>
 
                 {/* Content */}
                 <div className="work-card-content p-6">

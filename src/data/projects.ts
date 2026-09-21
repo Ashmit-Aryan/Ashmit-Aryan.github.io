@@ -17,99 +17,144 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
+    {
     id: 1,
-    title: 'C Compiler',
-    description: 'A complete C compiler implementation with lexer, parser, AST, and code generation targeting x86-64 assembly.',
-    longDescription: 'Built from scratch in C, this compiler implements a full compilation pipeline including lexical analysis, recursive descent parsing, semantic analysis with symbol tables, intermediate representation, and x86-64 code generation. Supports a subset of C99 including functions, control flow, pointers, and structs.',
+    title: 'DeployGuard',
+    description:
+      'A deployment-focused developer tool built to help validate and monitor application deployments before they reach production.',
+    longDescription:
+      'DeployGuard is a developer-focused project aimed at making deployment workflows safer and more predictable. It focuses on deployment validation, environment checks, and identifying common issues that can cause applications to fail after deployment.',
     category: 'systems',
-    tags: ['C', 'Compiler Design', 'x86-64 Assembly', 'Lexer', 'Parser', 'AST'],
-    image: '/projects/c-compiler.svg',
-    imageAlt: 'C Compiler architecture diagram showing compilation pipeline',
+    tags: ['Python', 'FastAPI', 'Deployment', 'DevOps', 'Validation'],
+    image: '/Deployguard.png',
+    imageAlt: 'DeployGuard deployment monitoring and validation system',
     links: {
-      code: 'https://github.com/ashmitaryan/c-compiler',
-      caseStudy: '/blog/c-compiler-writeup',
+      code: 'https://github.com/Ashmit-Aryan/Deploy-Guard',
     },
     featured: true,
-    year: '2024',
+    year: '2026',
   },
+
   {
     id: 2,
-    title: 'HackIndia 2024 - MediChain',
-    description: 'Blockchain-based medical record management system with zero-knowledge proofs for patient privacy.',
-    longDescription: 'Developed during HackIndia 2024, this dApp allows patients to control access to their medical records using zero-knowledge proofs. Built with Rust (Solana smart contracts), React frontend, and IPFS for decentralized storage.',
-    category: 'hackathons',
-    tags: ['Rust', 'Solana', 'React', 'Zero-Knowledge Proofs', 'IPFS', 'Blockchain'],
-    image: '/projects/medichain.svg',
-    imageAlt: 'MediChain dashboard showing medical record management',
+    title: 'WebSocket Chat Application',
+    description:
+      'A full-stack real-time messaging platform with private conversations, group chat, presence tracking, authentication, and persistent chat history.',
+    longDescription:
+      'Built a real-time communication platform using Socket.IO with a Node.js and Express backend and a React frontend. The application handles authenticated socket connections, private and group messaging, online/offline presence, typing indicators, media sharing, and persistent chat data.',
+    category: 'fullstack',
+    tags: [
+      'React',
+      'Node.js',
+      'Express.js',
+      'Socket.IO',
+      'MongoDB',
+      'JWT',
+      'WebSockets',
+    ],
+    image: '/chatapp.png',
+    imageAlt: 'Real-time WebSocket chat application',
     links: {
-      demo: 'https://medichain-demo.vercel.app',
-      code: 'https://github.com/ashmitaryan/medichain',
+      code: 'https://github.com/Ashmit-Aryan/WebSocket-Chat-Application',
     },
     featured: true,
-    year: '2024',
+    year: '2026',
   },
+
   {
     id: 3,
-    title: 'HackIndia 2023 - TaskFlow',
-    description: 'Real-time collaborative task management with WebSocket synchronization and offline support.',
-    longDescription: 'A Trello-inspired Kanban board with real-time collaboration using WebSockets, conflict-free replicated data types (CRDTs) for offline editing, and PostgreSQL backend with FastAPI.',
-    category: 'hackathons',
-    tags: ['FastAPI', 'React', 'WebSockets', 'CRDTs', 'PostgreSQL', 'Redis'],
-    image: '/projects/taskflow.svg',
-    imageAlt: 'TaskFlow Kanban board with real-time collaboration',
+    title: 'Hospital Management System',
+    description:
+      'A full-stack hospital administration system covering authentication, patients, doctors, appointments, billing, and operational dashboards.',
+    longDescription:
+      'Developed a MERN-based hospital management platform with a React frontend and Node.js/Express backend. The system includes JWT authentication, patient and doctor management, appointment scheduling, billing workflows, protected routes, and data-driven administrative interfaces built with Material UI and DataGrid.',
+    category: 'fullstack',
+    tags: [
+      'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT',
+      'Material UI',
+      'DataGrid',
+    ],
+    image: '/HMS.png',
+    imageAlt: 'Hospital Management System dashboard',
     links: {
-      demo: 'https://taskflow-demo.vercel.app',
-      code: 'https://github.com/ashmitaryan/taskflow',
+      code: 'https://github.com/Ashmit-Aryan/Hospital-Management',
     },
     featured: true,
-    year: '2023',
+    year: '2025',
   },
+
   {
     id: 4,
-    title: 'FastAPI Microservice Boilerplate',
-    description: 'Production-ready FastAPI template with authentication, database migrations, testing, and CI/CD.',
-    longDescription: 'A comprehensive boilerplate for building scalable APIs with FastAPI. Includes JWT authentication, SQLAlchemy 2.0 with async support, Alembic migrations, pytest test suite, Docker multi-stage builds, and GitHub Actions CI/CD.',
+    title: 'Student Management System',
+    description:
+      'A Java web application implementing student CRUD operations, authentication, dashboard analytics, and database-driven management using MVC and DAO architecture.',
+    longDescription:
+      'Built a traditional Java web application using Servlets, JSP, JDBC, and MySQL. The project follows MVC and DAO patterns and includes session-based authentication, servlet filters, protected routes, student CRUD operations, course categorisation, search functionality, and an administrative dashboard.',
     category: 'backend',
-    tags: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Alembic', 'Docker', 'GitHub Actions', 'Pytest'],
-    image: '/projects/fastapi-boilerplate.svg',
-    imageAlt: 'FastAPI boilerplate architecture diagram',
+    tags: [
+      'Java',
+      'Servlets',
+      'JSP',
+      'JDBC',
+      'MySQL',
+      'MVC',
+      'DAO',
+      'Apache Tomcat',
+    ],
+    image: '/SMS.png',
+    imageAlt: 'Java Student Management System dashboard',
     links: {
-      code: 'https://github.com/ashmitaryan/fastapi-boilerplate',
+      code: 'https://github.com/Ashmit-Aryan/Students-Management-System-JAVA',
     },
     featured: true,
-    year: '2024',
+    year: '2026',
   },
+
   {
     id: 5,
-    title: 'Rust CLI Tool - DevEnv',
-    description: 'Cross-platform developer environment manager written in Rust with plugin system.',
-    longDescription: 'A CLI tool for managing development environments across projects. Features include language version management, dotfile synchronization, project-specific configurations, and a WASM-based plugin system for extensibility.',
-    category: 'systems',
-    tags: ['Rust', 'CLI', 'WASM', 'Cross-platform', 'Plugin System'],
-    image: '/projects/devenv.svg',
-    imageAlt: 'DevEnv CLI terminal screenshot',
+    title: 'Attendance Automation Dashboard',
+    description:
+      'A modern student attendance and analytics interface designed for managing attendance records and presenting academic data through an interactive dashboard.',
+    longDescription:
+      'Created a responsive attendance management interface using React and TypeScript with a component-driven UI. The project focuses on visualising attendance information, managing student records, and presenting analytics through a clean administrative dashboard.',
+    category: 'fullstack',
+    tags: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Recharts',
+    ],
+    image: '/Attendance.png',
+    imageAlt: 'Student attendance analytics dashboard',
     links: {
-      code: 'https://github.com/ashmitaryan/devenv',
+      code: 'https://github.com/Ashmit-Aryan/Attendance-Automation-Dashboard',
     },
-    featured: false,
-    year: '2024',
+    featured: true,
+    year: '2026',
   },
+
   {
     id: 6,
-    title: 'LeetCode Solutions Library',
-    description: 'Curated collection of 200+ LeetCode solutions in Rust, C, and Python with explanations.',
-    longDescription: 'Organized by pattern (sliding window, two pointers, DP, graphs, etc.) with time/space complexity analysis, multiple approaches, and detailed explanations. Used for interview preparation and algorithm study.',
+    title: 'NASA APOD Photo Viewer',
+    description:
+      'An Android application that consumes NASA’s Astronomy Picture of the Day API to display daily space imagery and historical entries.',
+    longDescription:
+      'Built an Android application around NASA’s public APOD API. Users can browse the astronomy image or video released for a given day and search for historical dates, providing a simple interface for exploring NASA’s daily astronomy content.',
     category: 'opensource',
-    tags: ['Rust', 'C', 'Python', 'Algorithms', 'Data Structures', 'Interview Prep'],
-    image: '/projects/leetcode.svg',
-    imageAlt: 'LeetCode solutions library homepage',
+    tags: ['Android', 'Java', 'NASA API', 'REST API', 'Mobile'],
+    image: '/nasaapod.png',
+    imageAlt: 'NASA Astronomy Picture of the Day Android application',
     links: {
-      code: 'https://github.com/ashmitaryan/leetcode-solutions',
-      demo: 'https://leetcode-solutions.ashmitaryan.dev',
+      code: 'https://github.com/Ashmit-Aryan/Nasa-Apod-Photo-Viewer',
     },
     featured: false,
-    year: '2024',
+    year: '2021',
   },
 ]
 

@@ -30,7 +30,7 @@ const contactMethods = [
   },
   {
     label: 'GitHub',
-    value: 'github.com/ashmitaryan',
+    value: 'github.com/ashmit-aryan',
     href: personalInfo.social.github,
     icon: GitBranch,
     description: 'Open source & code',
@@ -178,7 +178,7 @@ export function Contact() {
                 Download Resume
               </a>
               <p className="text-sm text-fg-tertiary text-center sm:text-left mt-3">
-                Last updated: January 2025
+                Last updated: August 2026
               </p>
             </motion.div>
           </motion.div>
